@@ -768,7 +768,7 @@ FcgidProcessLifeTime        60
 
 #Or use this if you use the file above
 FCGIWrapper /usr/bin/php-cgi .php
-" > /etc/apache2/conf.d/php-fcgid.conf
+" > /etc/apache2/conf-available/php-fcgid.conf
 #
 echo
 echo
