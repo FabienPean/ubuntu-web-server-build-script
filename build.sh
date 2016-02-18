@@ -910,7 +910,7 @@ echo "<ifmodule mod_evasive20.c>
     DOSWhitelist 127.0.0.1
     DOSWhitelist $IGNOREIP
 </ifmodule>
-" > /etc/apache2/conf.d/modevasive
+" > /etc/apache2/conf-available/mod-evasive.conf
 #
 echo
 echo
