@@ -812,7 +812,7 @@ MaxClients              20
 # Default 1000
 # 0 = process will never expire
 MaxRequestsPerChild     100
-"  > /etc/apache2/conf.d/mpm-worker.conf
+"  > /etc/apache2/conf-available/mpm-worker.conf
 #
 echo
 echo
