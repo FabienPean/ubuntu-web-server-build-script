@@ -1114,7 +1114,7 @@ echo "<IfModule security2_module>
     Include modsecurity-crs/base_rules/*.conf
     Include modsecurity-crs/activated_rules/*.conf
 </IfModule>
-" > /etc/apache2/conf.d/modsecurity
+" > /etc/apache2/conf-available/mod-security.conf
 #
 echo
 echo
