@@ -36,7 +36,7 @@ echo
 echo "First things first, let's make sure we have the latest updates."
 echo "---------------------------------------------------------------"
 #
-apt-get update && apt-get -y safe-upgrade
+apt-get update && apt-get -y upgrade
 #
 echo
 echo "Setting the hostname."
@@ -1133,7 +1133,7 @@ echo "One final hurrah"
 echo "--------------------------------------------------------------"
 echo
 #
-apt-get update && apt-get upgrade
+apt-get update && apt-get -y upgrade
 #
 echo
 echo
