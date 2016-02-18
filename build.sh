@@ -1002,7 +1002,6 @@ echo
 echo "Enabling OWASP example configuration"
 echo "---------------------------------------------------------------"
 #
-rm /etc/apache2/modsecurity-crs/modsecurity_crs_10_config.conf
 mv /etc/apache2/modsecurity-crs/modsecurity_crs_10_setup.conf.example /etc/apache2/modsecurity-crs/modsecurity_crs_10_config.conf
 #
 echo
