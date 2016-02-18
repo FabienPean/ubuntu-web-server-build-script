@@ -1,8 +1,9 @@
 #!/bin/bash
 # ================================================================== #
-# Ubuntu 10.04 web server build shell script
+# Debian 8 web server build shell script
 # ================================================================== #
 # Parts copyright (c) 2012 Matt Thomas http://betweenbrain.com
+# Parts copyright (c) 2016 Fabien Péan
 # This script is licensed under GNU GPL version 2.0 or above
 # ================================================================== #
 #
