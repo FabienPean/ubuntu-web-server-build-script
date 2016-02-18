@@ -984,7 +984,7 @@ echo "---------------------------------------------------------------"
 #
 apt-get -y install libxml2 libxml2-dev libxml2-utils
 apt-get -y install libaprutil1 libaprutil1-dev
-apt-get -y install libapache-mod-security
+apt-get -y install libapache2-mod-security2
 #
 echo
 echo
