@@ -735,7 +735,7 @@ echo "Install fcgid, PHP, and PHP modules"
 # https://help.ubuntu.com/community/ApacheMySQLPHP
 echo "--------------------------------------------------------------"
 #
-apt-get -y install libapache2-mod-fcgid php5-cgi php5-cli php5-mysql php5-curl php5-gd php5-mcrypt php5-memcache php5-mhash php5-xmlrpc php5-xsl
+apt-get -y install libapache2-mod-fcgid php5-cgi php5-cli php5-mysql php5-curl php5-gd php5-mcrypt php5-memcache php5-common php5-xmlrpc php5-xsl
 #
 a2enmod fcgid
 #
