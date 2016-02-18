@@ -224,8 +224,8 @@ echo $PUBLICKEY >> /home/$USER/.ssh/authorized_keys
 chown -R $USER:$USER /home/$USER/.ssh
 chmod 700 /home/$USER/.ssh
 chmod 600 /home/$USER/.ssh/authorized_keys
-#
-sed -i "s/#AuthorizedKeysFile/AuthorizedKeysFile/g" /etc/ssh/sshd_config
+# Remove access by ssh key...
+# sed -i "s/#AuthorizedKeysFile/AuthorizedKeysFile/g" /etc/ssh/sshd_config
 #
 /etc/init.d/ssh restart
 #
