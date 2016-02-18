@@ -205,6 +205,7 @@ echo
 echo "Adding $USER to sudoers"
 echo "---------------------------------------------------------------"
 #
+apt-get install -y sudo
 cp /etc/sudoers /etc/sudoers.tmp
 chmod 0640 /etc/sudoers.tmp
 echo "$USER    ALL=(ALL) ALL" >> /etc/sudoers.tmp
