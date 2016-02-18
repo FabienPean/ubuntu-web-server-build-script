@@ -725,7 +725,8 @@ echo "--------------------------------------------------------------"
 #
 apt-get -y install mysql-server && mysql_secure_installation
 #
-apt-get -y install libapache2-mod-auth-mysql
+# apt-get -y install libapache2-mod-auth-mysql
+# TODO replace previous line by mod_authn_dbd or mod_authz_dbd, check which one fits better
 #
 echo
 echo
