@@ -1133,7 +1133,7 @@ echo "One final hurrah"
 echo "--------------------------------------------------------------"
 echo
 #
-apt-get update && apt-get -y safe-upgrade
+apt-get update && apt-get upgrade
 #
 echo
 echo
