@@ -36,7 +36,7 @@ echo
 echo "First things first, let's make sure we have the latest updates."
 echo "---------------------------------------------------------------"
 #
-aptitude update && aptitude -y safe-upgrade
+apt-get update && apt-get -y safe-upgrade
 #
 echo
 echo "Setting the hostname."
@@ -81,7 +81,7 @@ echo
 echo "Synchronize the system clock with an NTP server"
 echo "---------------------------------------------------------------"
 #
-aptitude install -y ntp
+apt-get install -y ntp
 #
 echo
 echo
@@ -235,7 +235,7 @@ sed -i "s/#AuthorizedKeysFile/AuthorizedKeysFile/g" /etc/ssh/sshd_config
 echo "Installing IPTables firewall"
 echo "---------------------------------------------------------------"
 #
-aptitude install -y iptables
+apt-get install -y iptables
 #
 echo
 echo
@@ -373,7 +373,7 @@ echo
 echo "Installing debconf utilities"
 echo "---------------------------------------------------------------"
 #
-aptitude install -y debconf-utils
+apt-get install -y debconf-utils
 #
 echo
 echo
@@ -387,7 +387,7 @@ echo "postfix postfix/main_mailer_type select Internet Site" | debconf-set-selec
 echo "postfix postfix/mailname string $HOSTNAME.$DOMAIN" | debconf-set-selections
 echo "postfix postfix/destinations string localhost.localdomain, localhost" | debconf-set-selections
 #
-aptitude -y install postfix mailutils
+apt-get -y install postfix mailutils
 #
 ln -s /usr/bin/mail /bin/mail
 #
@@ -415,7 +415,7 @@ echo
 echo "Installing Apache threaded server (MPM Worker)"
 echo "---------------------------------------------------------------"
 #
-aptitude -y install apache2-mpm-worker apache2-suexec
+apt-get -y install apache2-mpm-worker apache2-suexec
 echo "ServerName $HOSTNAME" > /etc/apache2/conf.d/servername.conf
 sed -i "s/Timeout 300/Timeout 30/g" /etc/apache2/apache2.conf
 #
@@ -714,7 +714,7 @@ echo
 echo "Installing Apache2 Utils"
 echo "---------------------------------------------------------------"
 #
-aptitude install -y apache2-utils
+apt-get install -y apache2-utils
 #
 echo
 echo
@@ -723,9 +723,9 @@ echo "Install MySQL and MySQL modules"
 # https://help.ubuntu.com/community/ApacheMySQLPHP
 echo "--------------------------------------------------------------"
 #
-aptitude -y install mysql-server && mysql_secure_installation
+apt-get -y install mysql-server && mysql_secure_installation
 #
-aptitude -y install libapache2-mod-auth-mysql
+apt-get -y install libapache2-mod-auth-mysql
 #
 echo
 echo
@@ -734,7 +734,7 @@ echo "Install fcgid, PHP, and PHP modules"
 # https://help.ubuntu.com/community/ApacheMySQLPHP
 echo "--------------------------------------------------------------"
 #
-aptitude -y install libapache2-mod-fcgid php5-cgi php5-cli php5-mysql php5-curl php5-gd php5-mcrypt php5-memcache php5-mhash php5-suhosin php5-xmlrpc php5-xsl
+apt-get -y install libapache2-mod-fcgid php5-cgi php5-cli php5-mysql php5-curl php5-gd php5-mcrypt php5-memcache php5-mhash php5-suhosin php5-xmlrpc php5-xsl
 #
 a2enmod fcgid
 #
@@ -878,7 +878,7 @@ echo "Installing and configuring logwatch for log monitoring"
 # https://help.ubuntu.com/community/Logwatch
 echo "--------------------------------------------------------------"
 #
-aptitude -y install logwatch
+apt-get -y install logwatch
 mkdir /var/cache/logwatch
 cp /usr/share/logwatch/default.conf/logwatch.conf /etc/logwatch/conf/
 #
@@ -903,7 +903,7 @@ echo "Installing mod_evasive"
 # http://library.linode.com/web-servers/apache/mod-evasive
 echo "---------------------------------------------------------------"
 #
-aptitude install -y libapache2-mod-evasive
+apt-get install -y libapache2-mod-evasive
 mkdir /var/log/mod_evasive
 chown www-data:www-data /var/log/mod_evasive/
 echo "<ifmodule mod_evasive20.c>
@@ -927,7 +927,7 @@ echo "Installing Fail2ban"
 # http://library.linode.com/security/fail2ban
 echo "---------------------------------------------------------------"
 #
-aptitude -y install fail2ban
+apt-get -y install fail2ban
 #
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 #
@@ -990,9 +990,9 @@ echo "Installing mod_security"
 # http://library.linode.com/web-servers/apache/mod-security
 echo "---------------------------------------------------------------"
 #
-aptitude -y install libxml2 libxml2-dev libxml2-utils
-aptitude -y install libaprutil1 libaprutil1-dev
-aptitude -y install libapache-mod-security
+apt-get -y install libxml2 libxml2-dev libxml2-utils
+apt-get -y install libaprutil1 libaprutil1-dev
+apt-get -y install libapache-mod-security
 #
 echo
 echo
@@ -1001,7 +1001,7 @@ echo "Fetching OWASP rules for mod_security"
 # https://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project
 echo "---------------------------------------------------------------"
 #
-aptitude -y install git-core
+apt-get -y install git-core
 git clone https://github.com/SpiderLabs/owasp-modsecurity-crs.git /etc/apache2/modsecurity-crs
 #
 echo
@@ -1142,7 +1142,7 @@ echo "One final hurrah"
 echo "--------------------------------------------------------------"
 echo
 #
-aptitude update && aptitude -y safe-upgrade
+apt-get update && apt-get -y safe-upgrade
 #
 echo
 echo
