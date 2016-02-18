@@ -878,7 +878,7 @@ sed -i "s/MailTo = root/MailTo = $ADMINEMAIL/g" /etc/logwatch/conf/logwatch.conf
 sed -i "s/Detail = Low/Detail = High/g" /etc/logwatch/conf/logwatch.conf
 sed -i "s/Format = text/Format = html/g" /etc/logwatch/conf/logwatch.conf
 #
-cp /usr/share/logwatch/default.conf/logfiles/http.conf to /etc/logwatch/conf/logfiles
+cp /usr/share/logwatch/default.conf/logfiles/http.conf /etc/logwatch/conf/logfiles
 #
 echo "
 # Log files for $DOMAIN
