@@ -417,7 +417,7 @@ echo "Installing Apache threaded server (MPM Worker)"
 echo "---------------------------------------------------------------"
 #
 apt-get -y install apache2-mpm-worker apache2-suexec
-echo "ServerName $HOSTNAME" > /etc/apache2/conf.d/servername.conf
+echo "ServerName $HOSTNAME" > /etc/apache2/conf-available/servername.conf
 sed -i "s/Timeout 300/Timeout 30/g" /etc/apache2/apache2.conf
 #
 /etc/init.d/apache2 restart
@@ -657,7 +657,7 @@ echo "<IfModule mod_expires.c>
     ExpiresByType video/x-la-asf \"now plus 1 month\"
     ExpiresByType video/x-ms-asf \"now plus 1 month\"
 </IfModule>
-" >> /etc/apache2/conf.d/mod-expires.conf
+" >> /etc/apache2/conf-available/mod-expires.conf
 #
 echo
 echo
@@ -693,7 +693,7 @@ echo "<IfModule mod_deflate.c>
         Header append Vary User-Agent env=!dont-vary
     </Location>
 </IfModule>
-" >> /etc/apache2/conf.d/mod-deflate.conf
+" >> /etc/apache2/conf-available/mod-deflate.conf
 #
 echo
 echo
