@@ -972,8 +972,8 @@ echo
 echo "Basic Apache security"
 echo "---------------------------------------------------------------"
 #
-sed -i "s/ServerTokens OS/ServerTokens Prod/g" /etc/apache2/conf.d/security
-sed -i "s/ServerSignature On/ServerSignature Off/g" /etc/apache2/conf.d/security
+sed -i "s/ServerTokens OS/ServerTokens Prod/g" /etc/apache2/conf-available/security.conf
+sed -i "s/ServerSignature On/ServerSignature Off/g" /etc/apache2/conf-available/security.conf
 #
 echo
 echo
