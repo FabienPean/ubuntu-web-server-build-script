@@ -111,8 +111,8 @@ echo
 echo "Instruct sshd to listen only on a specific IP address."
 echo "---------------------------------------------------------------"
 echo
-#
-sed -i "s/#ListenAddress 0.0.0.0/ListenAddress $SYSTEMIP/g" /etc/ssh/sshd_config
+# Disable listening only IP... Not everyone has a static one
+# sed -i "s/#ListenAddress 0.0.0.0/ListenAddress $SYSTEMIP/g" /etc/ssh/sshd_config
 #
 echo
 echo
@@ -137,8 +137,8 @@ echo
 echo
 echo "Disabling password authentication"
 echo "---------------------------------------------------------------"
-#
-sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
+# Keep access by password enabled...
+# sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
 #
 echo
 echo
@@ -224,7 +224,7 @@ echo $PUBLICKEY >> /home/$USER/.ssh/authorized_keys
 chown -R $USER:$USER /home/$USER/.ssh
 chmod 700 /home/$USER/.ssh
 chmod 600 /home/$USER/.ssh/authorized_keys
-# Remove access by ssh key...
+# Do not add ssh key...
 # sed -i "s/#AuthorizedKeysFile/AuthorizedKeysFile/g" /etc/ssh/sshd_config
 #
 /etc/init.d/ssh restart
